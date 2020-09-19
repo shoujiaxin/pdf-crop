@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2953C9652515FCD7004A490C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953C9642515FCD7004A490C /* main.swift */; };
+		2953C9742515FF35004A490C /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2953C9732515FF35004A490C /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2953C9742515FF35004A490C /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = pdfcropper;
+			packageProductDependencies = (
+				2953C9732515FF35004A490C /* ArgumentParser */,
+			);
 			productName = "PDFCropper-CLI";
 			productReference = 2953C9612515FCD7004A490C /* pdfcropper */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +110,9 @@
 				Base,
 			);
 			mainGroup = 2953C9582515FCD6004A490C;
+			packageReferences = (
+				2953C9722515FF35004A490C /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 2953C9622515FCD7004A490C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +293,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2953C9722515FF35004A490C /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2953C9732515FF35004A490C /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2953C9722515FF35004A490C /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2953C9592515FCD6004A490C /* Project object */;
 }
