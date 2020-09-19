@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2953C9612515FCD7004A490C /* pdfcropper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pdfcropper; sourceTree = BUILT_PRODUCTS_DIR; };
+		2953C9612515FCD7004A490C /* pdf-cropper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pdf-cropper"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2953C9642515FCD7004A490C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 		2953C9622515FCD7004A490C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2953C9612515FCD7004A490C /* pdfcropper */,
+				2953C9612515FCD7004A490C /* pdf-cropper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2953C9602515FCD6004A490C /* pdfcropper */ = {
+		2953C9602515FCD6004A490C /* pdf-cropper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdfcropper" */;
+			buildConfigurationList = 2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-cropper" */;
 			buildPhases = (
 				2953C95D2515FCD6004A490C /* Sources */,
 				2953C95E2515FCD6004A490C /* Frameworks */,
@@ -79,12 +79,12 @@
 			);
 			dependencies = (
 			);
-			name = pdfcropper;
+			name = "pdf-cropper";
 			packageProductDependencies = (
 				2953C9732515FF35004A490C /* ArgumentParser */,
 			);
 			productName = "PDFCropper-CLI";
-			productReference = 2953C9612515FCD7004A490C /* pdfcropper */;
+			productReference = 2953C9612515FCD7004A490C /* pdf-cropper */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2953C9602515FCD6004A490C /* pdfcropper */,
+				2953C9602515FCD6004A490C /* pdf-cropper */,
 			);
 		};
 /* End PBXProject section */
@@ -283,7 +283,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdfcropper" */ = {
+		2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-cropper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2953C9692515FCD7004A490C /* Debug */,
