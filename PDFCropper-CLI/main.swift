@@ -10,8 +10,8 @@ import Foundation
 import PDFKit
 
 struct PdfCropper: ParsableCommand {
-    @Option(name: .shortAndLong, parsing: SingleValueParsingStrategy.next, help: "Input PDF file.", completion: nil)
-    var input: String?
+    @Argument(help: "Input PDF file.", completion: nil)
+    var file: String?
 
     @Option(name: .shortAndLong, parsing: SingleValueParsingStrategy.next, help: "Output PDF file.", completion: nil)
     var output: String?
@@ -20,8 +20,8 @@ struct PdfCropper: ParsableCommand {
     var margins: [Int] = []
 
     mutating func run() throws {
-        guard let input = input, let document = PDFDocument(url: URL(fileURLWithPath: input)) else {
-            return
+        guard let file = file, let document = PDFDocument(url: URL(fileURLWithPath: file)) else {
+            throw ValidationError("Please input a PDF file.")
         }
 
         for i in 0 ..< document.pageCount {
@@ -44,7 +44,7 @@ struct PdfCropper: ParsableCommand {
             dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
             let fileName = "pdf-cropper-\(dateFormatter.string(from: Date())).pdf"
 
-            var url = URL(fileURLWithPath: input)
+            var url = URL(fileURLWithPath: file)
             url.deleteLastPathComponent()
             url.appendPathComponent(fileName)
 
