@@ -10,14 +10,23 @@ import Foundation
 import PDFKit
 
 struct PdfCropper: ParsableCommand {
-    @Argument(help: "Input PDF file.", completion: nil)
+    @Argument(help: "Input PDF file.")
     var file: String?
 
-    @Option(name: .shortAndLong, parsing: SingleValueParsingStrategy.next, help: "Output PDF file.", completion: nil)
+    @Option(name: .shortAndLong, help: "Output PDF file.")
     var output: String?
 
-    @Option(name: .shortAndLong, parsing: ArrayParsingStrategy.upToNextOption, help: "Crop margins (top, left, bottom, right).", completion: nil)
-    var margins: [Int] = []
+    @Option(name: .shortAndLong, help: "Top margin.")
+    var topMargin: Int = 0
+
+    @Option(name: .shortAndLong, help: "Left margin.")
+    var leftMargin: Int = 0
+
+    @Option(name: .shortAndLong, help: "Bottom margin.")
+    var bottomMargin: Int = 0
+
+    @Option(name: .shortAndLong, help: "Right margin.")
+    var rightMargin: Int = 0
 
     mutating func run() throws {
         guard let file = file, let document = PDFDocument(url: URL(fileURLWithPath: file)) else {
@@ -27,14 +36,7 @@ struct PdfCropper: ParsableCommand {
         for i in 0 ..< document.pageCount {
             let page = document.page(at: i)
 
-            if margins.isEmpty {
-                page?.autoCropByContent(with: CropMargins.zero)
-            } else {
-                while margins.count < 4 {
-                    margins.append(0)
-                }
-                page?.autoCropByContent(with: CropMargins(top: margins[0], left: margins[1], bottom: margins[2], right: margins[3]))
-            }
+            page?.autoCropByContent(with: CropMargins(top: topMargin, left: leftMargin, bottom: bottomMargin, right: rightMargin))
         }
 
         if let output = output {
