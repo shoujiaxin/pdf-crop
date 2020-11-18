@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  PDFCropper-CLI
+//  PDFCrop
 //
 //  Created by Jiaxin Shou on 2020/9/19.
 //
@@ -9,7 +9,7 @@ import ArgumentParser
 import Foundation
 import PDFKit
 
-struct PdfCropper: ParsableCommand {
+struct PdfCrop: ParsableCommand {
     @Argument(help: "Input PDF file.")
     var file: String?
 
@@ -44,7 +44,7 @@ struct PdfCropper: ParsableCommand {
         } else {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-            let fileName = "pdf-cropper-\(dateFormatter.string(from: Date())).pdf"
+            let fileName = "pdf-crop-\(dateFormatter.string(from: Date())).pdf"
 
             var url = URL(fileURLWithPath: file)
             url.deleteLastPathComponent()
@@ -175,4 +175,4 @@ extension NSBitmapImageRep {
     }
 }
 
-PdfCropper.main()
+PdfCrop.main()

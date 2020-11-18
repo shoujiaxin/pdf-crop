@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2953C9612515FCD7004A490C /* pdf-cropper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pdf-cropper"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2953C9612515FCD7004A490C /* pdf-crop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pdf-crop"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2953C9642515FCD7004A490C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,7 +43,7 @@
 		2953C9582515FCD6004A490C = {
 			isa = PBXGroup;
 			children = (
-				2953C9632515FCD7004A490C /* PDFCropper-CLI */,
+				2953C9632515FCD7004A490C /* PDFCrop */,
 				2953C9622515FCD7004A490C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,25 +51,25 @@
 		2953C9622515FCD7004A490C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2953C9612515FCD7004A490C /* pdf-cropper */,
+				2953C9612515FCD7004A490C /* pdf-crop */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2953C9632515FCD7004A490C /* PDFCropper-CLI */ = {
+		2953C9632515FCD7004A490C /* PDFCrop */ = {
 			isa = PBXGroup;
 			children = (
 				2953C9642515FCD7004A490C /* main.swift */,
 			);
-			path = "PDFCropper-CLI";
+			path = PDFCrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2953C9602515FCD6004A490C /* pdf-cropper */ = {
+		2953C9602515FCD6004A490C /* pdf-crop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-cropper" */;
+			buildConfigurationList = 2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-crop" */;
 			buildPhases = (
 				2953C95D2515FCD6004A490C /* Sources */,
 				2953C95E2515FCD6004A490C /* Frameworks */,
@@ -79,12 +79,12 @@
 			);
 			dependencies = (
 			);
-			name = "pdf-cropper";
+			name = "pdf-crop";
 			packageProductDependencies = (
 				2953C9732515FF35004A490C /* ArgumentParser */,
 			);
-			productName = "PDFCropper-CLI";
-			productReference = 2953C9612515FCD7004A490C /* pdf-cropper */;
+			productName = "PDFCrop";
+			productReference = 2953C9612515FCD7004A490C /* pdf-crop */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -94,14 +94,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					2953C9602515FCD6004A490C = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
-			buildConfigurationList = 2953C95C2515FCD6004A490C /* Build configuration list for PBXProject "PDFCropper-CLI" */;
+			buildConfigurationList = 2953C95C2515FCD6004A490C /* Build configuration list for PBXProject "PDFCrop" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2953C9602515FCD6004A490C /* pdf-cropper */,
+				2953C9602515FCD6004A490C /* pdf-crop */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +252,7 @@
 		2953C9692515FCD7004A490C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8TA5C5ASM9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -263,6 +264,7 @@
 		2953C96A2515FCD7004A490C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8TA5C5ASM9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -274,7 +276,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2953C95C2515FCD6004A490C /* Build configuration list for PBXProject "PDFCropper-CLI" */ = {
+		2953C95C2515FCD6004A490C /* Build configuration list for PBXProject "PDFCrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2953C9662515FCD7004A490C /* Debug */,
@@ -283,7 +285,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-cropper" */ = {
+		2953C9682515FCD7004A490C /* Build configuration list for PBXNativeTarget "pdf-crop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2953C9692515FCD7004A490C /* Debug */,
