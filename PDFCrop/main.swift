@@ -28,6 +28,9 @@ struct PdfCrop: ParsableCommand {
     @Option(name: .shortAndLong, help: "Right margin.")
     var rightMargin: Int = 0
 
+    @Flag(name: .shortAndLong, help: "Save the cropped file in place.")
+    var inPlace: Bool = false
+
     mutating func run() throws {
         guard let file = file, let document = PDFDocument(url: URL(fileURLWithPath: file)) else {
             throw ValidationError("Please input a PDF file.")
@@ -47,8 +50,10 @@ struct PdfCrop: ParsableCommand {
             let fileName = "pdf-crop-\(dateFormatter.string(from: Date())).pdf"
 
             var url = URL(fileURLWithPath: file)
-            url.deleteLastPathComponent()
-            url.appendPathComponent(fileName)
+            if !inPlace {
+                url.deleteLastPathComponent()
+                url.appendPathComponent(fileName)
+            }
 
             document.write(to: url)
         }
